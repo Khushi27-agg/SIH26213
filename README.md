@@ -94,7 +94,7 @@ SIH26231-CV-PoC/
 │   ├── 03_image_quality_control.ipynb
 │   └── 04_result_interpretation.ipynb
 │
-├── outputs/
+├── output/
 │   ├── sih26231_cv_features.csv
 │   └── image_quality_report.csv
 │
