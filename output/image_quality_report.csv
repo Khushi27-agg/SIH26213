@@ -1,0 +1,2 @@
+Image,Width,Height,Brightness,Sharpness,Resolution_Check,Brightness_Check,Sharpness_Check,Quality_Score,Final_Status
+negative_001 (1).png,400,300,60.3,789.06,True,True,True,100.0,Image Accepted
