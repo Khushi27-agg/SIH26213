@@ -117,7 +117,6 @@ SIH26231-CV-PoC/
 │   └── vite.config.js
 │
 ├── README.md
-└── SIH26231_KIT_SPECIFICATION.md
 
 ---
 
