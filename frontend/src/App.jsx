@@ -58,7 +58,7 @@ function App() {
     <div className="app">
       <header className="header">
         <div>
-          <h1>SIH26231</h1>
+          <h1>NarcoScope</h1>
           <p>Digital Companion for Field Drug Testing</p>
         </div>
 

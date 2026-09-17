@@ -1,4 +1,4 @@
-# SIH26231 — Digital Companion for Field Drug Testing
+# NarcoScope — Digital Companion for Field Drug Testing
 
 A Computer Vision and Machine Learning based prototype developed for Smart India Hackathon (SIH26231) to assist field personnel in analyzing field drug-test images.
 
@@ -11,21 +11,21 @@ The system takes an image of a field test, checks its quality, processes it usin
 ## Project Flow
 
 Image Capture / Upload
-        ↓
+↓
 Image Quality Check
-        ↓
+↓
 Computer Vision Processing
-        ↓
+↓
 ROI Detection
-        ↓
+↓
 Feature Extraction
-        ↓
+↓
 Machine Learning Model
-        ↓
+↓
 Result + Confidence
-        ↓
+↓
 Web Interface
-        ↓
+↓
 Records & Offline Support (Module 7)
 
 ---
@@ -33,28 +33,33 @@ Records & Offline Support (Module 7)
 ## Technologies Used
 
 Frontend:
+
 - React.js
 - Vite
 - JavaScript
 - CSS
 
 Backend:
+
 - Node.js
 - Express.js
 - Multer
 - CORS
 
 Computer Vision:
+
 - Python
 - OpenCV
 - NumPy
 
 Machine Learning:
+
 - Pandas
 - Scikit-learn
 - Joblib
 
 Development:
+
 - VS Code
 - Google Colab
 - Git
@@ -67,54 +72,57 @@ Development:
 SIH26231-CV-PoC/
 │
 ├── datasets/
-│   ├── train/
-│   │   ├── negative/
-│   │   ├── positive/
-│   │   └── inconclusive/
-│   │
-│   ├── validation/
-│   │   ├── negative/
-│   │   ├── positive/
-│   │   └── inconclusive/
-│   │
-│   └── test/
-│       ├── negative/
-│       ├── positive/
-│       └── inconclusive/
+│ ├── train/
+│ │ ├── negative/
+│ │ ├── positive/
+│ │ └── inconclusive/
+│ │
+│ ├── validation/
+│ │ ├── negative/
+│ │ ├── positive/
+│ │ └── inconclusive/
+│ │
+│ └── test/
+│ ├── negative/
+│ ├── positive/
+│ └── inconclusive/
 │
 ├── models/
-│   ├── sih26231_model.pkl
-│   ├── sih26231_scaler.pkl
-│   ├── sih26231_dataset_model.pkl
-│   └── sih26231_dataset_scaler.pkl
+│ ├── sih26231_model.pkl
+│ ├── sih26231_scaler.pkl
+│ ├── sih26231_dataset_model.pkl
+│ └── sih26231_dataset_scaler.pkl
 │
 ├── notebooks/
-│   ├── 01_colour_analysis.ipynb
-│   ├── 02_dataset_preparation.ipynb
-│   ├── 03_image_quality_control.ipynb
-│   └── 04_result_interpretation.ipynb
+│ ├── 01_colour_analysis.ipynb
+│ ├── 02_dataset_preparation.ipynb
+│ ├── 03_image_quality_control.ipynb
+│ └── 04_result_interpretation.ipynb
 │
 ├── output/
-│   ├── sih26231_cv_features.csv
-│   └── image_quality_report.csv
+│ ├── sih26231_cv_features.csv
+│ └── image_quality_report.csv
+├── outputs/
+│ ├── sih26231_cv_features.csv
+│ └── image_quality_report.csv
 │
 ├── backend/
-│   ├── server.js
-│   ├── package.json
-│   ├── routes/
-│   │   └── analysis.js
-│   ├── services/
-│   │   └── ml_service.py
-│   └── uploads/
+│ ├── server.js
+│ ├── package.json
+│ ├── routes/
+│ │ └── analysis.js
+│ ├── services/
+│ │ └── ml_service.py
+│ └── uploads/
 │
 ├── frontend/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   └── components/
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.js
+│ ├── src/
+│ │ ├── App.jsx
+│ │ ├── App.css
+│ │ └── components/
+│ ├── public/
+│ ├── package.json
+│ └── vite.config.js
 │
 ├── README.md
 
@@ -134,17 +142,17 @@ This module performs the basic image processing required before Machine Learning
 ### Processing
 
 Input Image
-    ↓
+↓
 Grayscale Conversion
-    ↓
+↓
 Gaussian Blur
-    ↓
+↓
 Canny Edge Detection
-    ↓
+↓
 Contour Detection
-    ↓
+↓
 ROI Detection
-    ↓
+↓
 Feature Extraction
 
 ### What was implemented?
@@ -330,19 +338,19 @@ backend/services/ml_service.py
 ### Backend Flow
 
 React Frontend
-    ↓
+↓
 POST /api/analyze
-    ↓
+↓
 Multer receives image
-    ↓
+↓
 Node.js starts Python service
-    ↓
+↓
 ml_service.py
-    ↓
+↓
 OpenCV + ML Model
-    ↓
+↓
 JSON Response
-    ↓
+↓
 React Frontend
 
 ### API Endpoints
@@ -405,15 +413,15 @@ frontend/src/App.css
 ### UI Flow
 
 Select / Capture Image
-        ↓
+↓
 Preview Image
-        ↓
+↓
 Analyze Image
-        ↓
+↓
 Backend API
-        ↓
+↓
 ML Processing
-        ↓
+↓
 Display Result
 
 The detected ROI is displayed as a bounding box over the uploaded image.
@@ -652,11 +660,11 @@ For the current prototype, browser localStorage can be used to store analysis re
 Example record:
 
 {
-    id: "TEST-001",
-    timestamp: "2026-09-16T12:30:00",
-    result: "Negative",
-    confidence: 97,
-    qualityScore: 100
+id: "TEST-001",
+timestamp: "2026-09-16T12:30:00",
+result: "Negative",
+confidence: 97,
+qualityScore: 100
 }
 
 The records should be saved after a successful analysis.
@@ -672,13 +680,13 @@ The first version does not need a complicated offline architecture.
 A simple approach is:
 
 Online
-    ↓
+↓
 Analyze Image
-    ↓
+↓
 Receive Result
-    ↓
+↓
 Save Result Locally
-    ↓
+↓
 View History Offline
 
 The user should still be able to view previously saved analysis records even when the backend is unavailable.
@@ -700,10 +708,10 @@ A possible frontend structure:
 
 frontend/
 └── src/
-    ├── App.jsx
-    ├── App.css
-    └── components/
-        └── History.jsx
+├── App.jsx
+├── App.css
+└── components/
+└── History.jsx
 
 The exact structure can be changed if a better implementation is required.
 
